@@ -129,7 +129,23 @@
         // --- КОНФІГУРАЦІЯ FIREBASE ---
         // Ці змінні будуть автоматично надані середовищем Canvas
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'quit-smoking-app-default';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyASpsqHjAKc-dHe2pps1MYF0WYJEJkkUbE",
+  authDomain: "quit-smoking-max.firebaseapp.com",
+  projectId: "quit-smoking-max",
+  storageBucket: "quit-smoking-max.firebasestorage.app",
+  messagingSenderId: "53877466841",
+  appId: "1:53877466841:web:cde808b8a76596b19740c8"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
 
